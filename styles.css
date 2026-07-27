@@ -259,3 +259,21 @@
 
 /* Prázdné předsádky uvnitř desek */
 .flyleaf{background:linear-gradient(145deg,#f8f4ec,#f1eadf)}
+
+
+/* Fotografická mezihra nahrazuje nadbytečné prázdné předsádky. */
+.album-opener{position:relative;padding:17mm 18mm 16mm;overflow:hidden;background:var(--cream)}
+.album-portrait{position:absolute;inset:35mm 18mm 18mm 61mm;overflow:hidden;background:#c8c4b9}
+.album-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 34%}
+.album-opener-copy{position:absolute;z-index:2;left:18mm;top:71mm;width:75mm;padding:11mm 9mm;background:rgba(250,247,240,.95);box-shadow:0 4mm 10mm rgba(38,43,39,.13)}
+.album-opener-copy h2{margin:3mm 0 5mm;font-size:49px;line-height:1}
+.album-opener-copy>p:last-child{margin:0;font:italic 17px/1.45 Georgia;color:var(--forest)}
+.album-collage{padding:17mm 18mm 15mm;background:linear-gradient(145deg,#f8f4ec,#efe6d9)}
+.album-collage>h2{max-width:130mm;margin:7mm 0 13mm;font-size:48px;line-height:1.05}
+.album-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7mm;align-items:end}
+.album-grid figure{margin:0;padding:3mm 3mm 5mm;background:#fff;box-shadow:0 3mm 8mm rgba(38,43,39,.12)}
+.album-grid figure:nth-child(2){transform:translateY(12mm)}
+.album-grid img{display:block;width:100%;height:120mm;object-fit:cover;object-position:center}
+.album-grid figure:first-child img{object-position:center 25%}
+.album-grid figure:last-child img{object-position:center 32%}
+.album-grid figcaption{padding-top:4mm;text-align:center;font:italic 16px Georgia;color:var(--wine)}
