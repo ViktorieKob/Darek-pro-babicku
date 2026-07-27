@@ -120,7 +120,7 @@
   .print-bar{gap:8px}
   .print-bar .print-actions{gap:5px}
   .print-actions a,.print-bar button{padding:9px 10px;font-size:11px}
-  .contents-list{columns:1}
+  .contents-list{columns:2;column-gap:10mm}
   .contents-list li{padding:2.2mm 0;font-size:clamp(10px,2.3vw,15px)}
 }
 
