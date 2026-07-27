@@ -18,8 +18,13 @@
         if (!sheet) return;
         const available = Math.max(280, document.documentElement.clientWidth - 16);
         const scale = Math.min(1, available / sheet.offsetWidth);
+        const scaledWidth = sheet.offsetWidth * scale;
+        const scaledHeight = sheet.offsetHeight * scale;
+        sheet.style.transformOrigin = 'top left';
         sheet.style.transform = `scale(${scale})`;
-        wrap.style.height = `${sheet.offsetHeight * scale}px`;
+        sheet.style.margin = '0';
+        wrap.style.width = `${scaledWidth}px`;
+        wrap.style.height = `${scaledHeight}px`;
       });
       return;
     }
