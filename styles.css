@@ -105,7 +105,7 @@
 .contents{background:var(--cream)}
 .contents>.eyebrow{margin-top:16mm}
 .contents h2{font-size:50px;margin:5mm 0 10mm}
-.contents-list{list-style:none;margin:0;padding:0;columns:2;column-gap:15mm}
+.contents-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(9,auto);grid-auto-flow:column;column-gap:15mm}
 .contents-list li{display:flex;align-items:baseline;gap:3mm;padding:3.2mm 0;border-bottom:1px solid var(--sand);break-inside:avoid;font-size:15px}
 .contents-list li span{flex:1}
 .contents-list li b{font:italic 19px Georgia;color:var(--wine)}
@@ -120,8 +120,6 @@
   .print-bar{gap:8px}
   .print-bar .print-actions{gap:5px}
   .print-actions a,.print-bar button{padding:9px 10px;font-size:11px}
-  .contents-list{columns:2;column-gap:10mm}
-  .contents-list li{padding:2.2mm 0;font-size:clamp(10px,2.3vw,15px)}
 }
 
 
