@@ -63,3 +63,19 @@
 @media print{
   .photo-placeholder img,.dedication-photo img{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
 }
+
+
+/* Sjednocená typografická hierarchie */
+:root{--story-copy-size:15px;--story-copy-leading:1.58}
+.overlap-card p:not(.eyebrow),
+.split-layout section>p:not(.eyebrow),
+.quote-layout section>p:not(.eyebrow),
+.columns-two p,
+.collage-copy p:not(.eyebrow):not(.lead),
+.postcard-grid section>p:not(.eyebrow),
+.memory-layout section>p:not(.eyebrow),
+.final-copy p{
+  font-size:var(--story-copy-size);
+  line-height:var(--story-copy-leading);
+}
+.overlap-card p:last-child{font-size:var(--story-copy-size)}
