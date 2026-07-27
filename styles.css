@@ -19,3 +19,47 @@
 .print-help[hidden]{display:none}.print-help{position:fixed;z-index:100;inset:0;display:grid;place-items:center;padding:22px;background:rgba(38,49,45,.72);font-family:Arial,sans-serif}.print-help-card{position:relative;width:min(430px,100%);padding:28px;border-radius:18px;background:var(--cream);box-shadow:0 24px 70px rgba(0,0,0,.3)}.print-help-card h2{margin:7px 0 14px;font:30px/1.08 Georgia,serif}.print-help-card p{font-size:15px;line-height:1.55}.print-help-close{position:absolute;top:10px;right:12px;border:0;background:none;font-size:28px;color:var(--ink);cursor:pointer}.print-help-ok{width:100%;margin-top:8px;padding:12px;border:0;border-radius:99px;background:var(--ink);color:#fff;font-weight:700;cursor:pointer}
 @page{size:A4 portrait;margin:0}
 @media print{html,body{width:210mm;margin:0;padding:0;background:#fff;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}.print-bar{display:none!important}.magazine{padding:0;margin:0}.page{width:210mm;height:297mm;min-height:297mm;margin:0;padding:17mm 18mm 16mm;box-shadow:none;overflow:hidden;break-after:page;page-break-after:always}.page:last-child{break-after:auto;page-break-after:auto}.cover{padding:16mm}.cover-title{left:16mm}.photo-placeholder{break-inside:avoid;page-break-inside:avoid}}
+
+/* Osobní fotografie a nové redakční stránky */
+.photo-placeholder img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;z-index:0}
+.cover-photo img{object-position:center 22%}
+.cover-photo:after{z-index:1}
+.game-gallery{display:grid;grid-template-rows:1fr 1fr;gap:8mm;height:236mm}
+.game-gallery figure{margin:0;min-height:0;display:flex;flex-direction:column}
+.game-gallery img{display:block;width:100%;min-height:0;flex:1;object-fit:contain;background:#fff;border:5px solid var(--cream);box-shadow:0 8px 24px rgba(38,49,45,.12)}
+.game-gallery figcaption{margin-top:2mm}
+.memory-layout-page .portrait-photo{overflow:hidden}
+.postcard img{object-position:center}
+.poem-page{background:linear-gradient(145deg,#e8dfcf,#f6f1e8)}
+.poem-page h2{font-size:54px;margin-top:12mm}
+.poem{max-width:125mm;margin:27mm auto 0;text-align:center;font:italic 30px/1.62 Georgia;color:var(--wine)}
+.poem-mark{width:34mm;height:34mm;margin:22mm auto 0;border:1px solid var(--wine);border-radius:50%;display:flex;align-items:center;justify-content:center;font:italic 25px Georgia;color:var(--wine)}
+.dedication-inner{margin-top:18mm}
+.dedication h2{margin-bottom:8mm}
+.dedication-inner>p:not(.eyebrow):not(.big-love):not(.signature){font-size:15px}
+.dedication-photo{position:relative;width:84mm;height:48mm;overflow:hidden;margin:8mm auto 0;border:5px solid var(--paper);box-shadow:0 6px 20px rgba(38,49,45,.13)}
+.dedication-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.dedication .signature{margin-top:5mm}
+.quote-layout-page .wide-photo{margin-top:14mm}
+.chapter-08 .sayings li{padding:5mm 0}
+.chapter-08 .sayings span{font-size:20px}
+
+@media(max-width:850px){
+  body{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden}
+  .page{overflow:hidden}
+  .cover{padding-left:8vw;padding-right:8vw}
+  .cover-title{left:12vw;right:10vw;bottom:16vw}
+  .cover-title p{font-size:clamp(8px,2vw,10px)}
+  .cover h1{font-size:clamp(31px,8.1vw,49px);max-width:78vw}
+  .cover-footer{left:12vw;right:12vw}
+  .opening-grid,.split-layout,.quote-layout,.memory-layout,.postcard-grid{min-width:0}
+  .opening-grid>* ,.split-layout>* ,.quote-layout>* ,.memory-layout>* ,.postcard-grid>*{min-width:0}
+  .overlap-card{left:6vw;width:58vw}
+  .overlap-card h2{font-size:clamp(24px,5vw,34px)}
+  .overlap-card p{font-size:clamp(10px,2.05vw,13px)}
+  .game-gallery{height:112vw}
+  .poem{font-size:clamp(20px,4.2vw,30px)}
+}
+@media print{
+  .photo-placeholder img,.dedication-photo img{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+}
