@@ -123,3 +123,13 @@
   .contents-list{columns:1}
   .contents-list li{padding:2.2mm 0;font-size:clamp(10px,2.3vw,15px)}
 }
+
+
+/* Vygenerované vzpomínkové ilustrace */
+.generated-image img { object-position: center; }
+.generated-contain { background: #f1eadf; }
+.generated-contain img {
+  object-fit: contain;
+  object-position: center;
+  background: #f7f2e9;
+}
