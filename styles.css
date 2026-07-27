@@ -227,3 +227,30 @@
 }
 .memory-tile span{font:italic 27px Georgia;letter-spacing:.03em}
 .dedication-photo img{object-position:center 34%}
+
+
+/* Čistá textová sazba kapitoly o pomoci */
+.help-story{position:relative;min-height:242mm;padding:22mm 12mm 16mm;background:linear-gradient(145deg,#f7f2e9 0 68%,#e7dece 68%)}
+.help-story:before{content:"08";position:absolute;right:8mm;top:5mm;font:italic 118px/1 Georgia;color:rgba(139,58,67,.08)}
+.help-heading{position:relative;max-width:142mm}
+.help-heading .chapter-no{margin-bottom:2mm}
+.help-heading h2{max-width:135mm;margin-top:5mm;font-size:49px;line-height:1.02}
+.help-body{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:17mm;margin-top:24mm;padding-top:13mm;border-top:1px solid var(--sand)}
+.help-copy p{margin:0 0 8mm;font-size:17px;line-height:1.72}
+.help-aside{display:flex;min-height:105mm;flex-direction:column;justify-content:space-between;padding:12mm;background:var(--wine);color:#fff}
+.help-aside>p{margin:0;font:italic 28px/1.35 Georgia}
+.help-aside>div{display:flex;align-items:center;gap:4mm;text-transform:uppercase;letter-spacing:.14em;font:8px Arial}
+.help-aside i{flex:1;height:1px;background:rgba(255,255,255,.5)}
+.dedication-photo{
+  width:58mm;
+  height:74mm;
+  margin-top:7mm;
+  padding:3mm;
+  background:#f8f3eb;
+}
+.dedication-photo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+}
