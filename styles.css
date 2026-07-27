@@ -86,3 +86,16 @@
 .poem{margin-top:14mm;font-size:24px;line-height:1.45}
 .poem-mark{margin-top:9mm}
 @media(max-width:850px){.poem{font-size:clamp(18px,3.2vw,24px);line-height:1.45}}
+
+
+/* Menší archivní snímek bez zvětšování nízkého rozlišení */
+.archival-photo{background:#e9dfd0}
+.archival-photo img{
+  inset:7mm;
+  width:calc(100% - 14mm);
+  height:calc(100% - 14mm);
+  object-fit:contain;
+  background:#f7f2e9;
+  border:3px solid #fff;
+  box-shadow:0 5px 14px rgba(38,49,45,.15);
+}
