@@ -254,3 +254,5 @@
   object-fit:contain;
   object-position:center;
 }
+
+.jested-photo img{object-position:center 48%}
