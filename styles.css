@@ -133,3 +133,49 @@
   object-position: center;
   background: #f7f2e9;
 }
+
+
+/* Mobilní volby tisku vždy na očích */
+@media (max-width: 850px) {
+  .print-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 9px 12px 10px;
+  }
+  .print-bar > div:first-child {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .print-bar .print-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    width: 100%;
+    gap: 7px;
+  }
+  .print-actions a,
+  .print-bar button {
+    display: flex;
+    min-width: 0;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 7px;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.15;
+  }
+  body:not(.booklet-mode) .magazine {
+    padding-top: 118px;
+  }
+  body.booklet-mode .magazine {
+    padding-top: 185px;
+  }
+  body.booklet-mode .booklet-guide {
+    top: 105px;
+  }
+}
