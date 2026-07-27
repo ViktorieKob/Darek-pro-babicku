@@ -256,3 +256,6 @@
 }
 
 .jested-photo img{object-position:center 48%}
+
+/* Prázdné předsádky uvnitř desek */
+.flyleaf{background:linear-gradient(145deg,#f8f4ec,#f1eadf)}
