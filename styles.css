@@ -179,3 +179,51 @@
     top: 105px;
   }
 }
+
+
+/* Rodinné fotografie a sazba bez falešných snímků */
+.family-photo img{object-fit:cover;object-position:center}
+.postcard.family-photo img{object-position:center 32%}
+.memory-layout .family-photo img{object-position:center}
+.family-wall .main-portrait img{object-position:center 22%}
+.family-wall .archival-family{background:#eee6d9}
+.family-wall .archival-family img{
+  inset:4mm;
+  width:calc(100% - 8mm);
+  height:calc(100% - 8mm);
+  object-fit:contain;
+  background:#f8f3eb;
+  border:2px solid #fff;
+}
+.memory-panel{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 67% 32%,rgba(255,255,255,.16),transparent 34%),
+    linear-gradient(145deg,#aeb3a6,#738078);
+}
+.memory-panel:before{
+  content:"";
+  position:absolute;
+  inset:8mm;
+  border:1px solid rgba(255,255,255,.55);
+}
+.memory-panel span{position:relative;font:italic 52px Georgia}
+.memory-panel p{position:relative;max-width:78mm;margin:5mm auto 0;text-align:center;font:12px/1.5 Arial;letter-spacing:.08em}
+.memory-tile{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 30% 25%,rgba(255,255,255,.18),transparent 36%),
+    linear-gradient(145deg,#aeb3a6,#77827a);
+}
+.memory-tile span{font:italic 27px Georgia;letter-spacing:.03em}
+.dedication-photo img{object-position:center 34%}
