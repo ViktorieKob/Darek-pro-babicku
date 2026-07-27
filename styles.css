@@ -54,9 +54,6 @@
   .cover-footer{left:12vw;right:12vw}
   .opening-grid,.split-layout,.quote-layout,.memory-layout,.postcard-grid{min-width:0}
   .opening-grid>* ,.split-layout>* ,.quote-layout>* ,.memory-layout>* ,.postcard-grid>*{min-width:0}
-  .overlap-card{left:6vw;width:58vw}
-  .overlap-card h2{font-size:clamp(24px,5vw,34px)}
-  .overlap-card p{font-size:clamp(10px,2.05vw,13px)}
   .game-gallery{height:112vw}
   .poem{font-size:clamp(20px,4.2vw,30px)}
 }
