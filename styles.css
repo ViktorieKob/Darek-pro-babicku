@@ -79,3 +79,10 @@
   line-height:var(--story-copy-leading);
 }
 .overlap-card p:last-child{font-size:var(--story-copy-size)}
+
+
+/* Sazba delší schválené básně */
+.poem-page h2{margin-top:8mm}
+.poem{margin-top:14mm;font-size:24px;line-height:1.45}
+.poem-mark{margin-top:9mm}
+@media(max-width:850px){.poem{font-size:clamp(18px,3.2vw,24px);line-height:1.45}}
