@@ -13,3 +13,5 @@ Tisk / PDF:
 Obsah je zĂˇmÄ›rnÄ› ukĂˇzkovĂ˝. Ĺ edozelenĂ© plochy oznaÄŤujĂ­ mĂ­sta pro budoucĂ­ fotografie.
 
 Online verze: https://viktoriekob.github.io/Darek-pro-babicku/
+
+Publikování: GitHub Pages
