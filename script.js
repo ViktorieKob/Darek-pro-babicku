@@ -72,7 +72,7 @@
     const barTitle = document.querySelector('.print-bar strong');
     const barMeta = document.querySelector('.print-bar div > span');
     if (barTitle) barTitle.textContent = 'Tisk jako skládaný sešit';
-    if (barMeta) barMeta.textContent = '20 stran · 5 archů A4 · výsledný formát A5';
+    if (barMeta) barMeta.textContent = '24 stran · 6 archů A4 · výsledný formát A5';
     if (printButton) printButton.textContent = '↗ Tisk sešitu na šířku';
     if (bookletButton) {
       bookletButton.textContent = '← Zpět na normální časopis';
