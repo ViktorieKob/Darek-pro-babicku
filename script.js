@@ -12,8 +12,32 @@
   window.addEventListener('resize', updatePageScale, { passive: true });
   window.addEventListener('orientationchange', updatePageScale, { passive: true });
   const button = document.getElementById('printButton');
+  const printHelp = document.getElementById('printHelp');
+  const closeButtons = [
+    document.getElementById('printHelpClose'),
+    document.getElementById('printHelpOk')
+  ].filter(Boolean);
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
   if (!button) return;
-  button.addEventListener('click', () => window.print());
+  button.addEventListener('click', () => {
+    if (isIOS && printHelp) {
+      printHelp.hidden = false;
+      document.body.style.overflow = 'hidden';
+      return;
+    }
+    window.print();
+  });
+  const closePrintHelp = () => {
+    if (!printHelp) return;
+    printHelp.hidden = true;
+    document.body.style.overflow = '';
+  };
+  closeButtons.forEach((closeButton) => closeButton.addEventListener('click', closePrintHelp));
+  printHelp?.addEventListener('click', (event) => {
+    if (event.target === printHelp) closePrintHelp();
+  });
   window.addEventListener('beforeprint', () => {
     document.documentElement.dataset.printing = 'true';
   });
