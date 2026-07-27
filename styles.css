@@ -99,3 +99,27 @@
   border:3px solid #fff;
   box-shadow:0 5px 14px rgba(38,49,45,.15);
 }
+
+
+/* Obsah a volby tisku */
+.contents{background:var(--cream)}
+.contents>.eyebrow{margin-top:16mm}
+.contents h2{font-size:50px;margin:5mm 0 10mm}
+.contents-list{list-style:none;margin:0;padding:0;columns:2;column-gap:15mm}
+.contents-list li{display:flex;align-items:baseline;gap:3mm;padding:3.2mm 0;border-bottom:1px solid var(--sand);break-inside:avoid;font-size:15px}
+.contents-list li span{flex:1}
+.contents-list li b{font:italic 19px Georgia;color:var(--wine)}
+.contents-note{margin-top:12mm;text-align:center;font-style:italic;color:var(--wine)}
+.print-bar .print-actions{display:flex;flex-direction:row;align-items:center;gap:8px}
+.print-actions a{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:11px 16px;color:#fff;text-decoration:none;font:700 12px Arial,sans-serif;white-space:nowrap}
+.print-actions a:hover{background:rgba(255,255,255,.1)}
+.booklet-guide{position:fixed;z-index:45;top:72px;left:50%;transform:translateX(-50%);width:min(760px,calc(100% - 24px));padding:11px 16px;border-radius:0 0 10px 10px;background:#e8dfcf;color:var(--ink);box-shadow:0 5px 18px rgba(38,49,45,.15);font-family:Arial,sans-serif;text-align:center}
+.booklet-guide strong{display:block;font-size:13px}
+.booklet-guide span{font-size:11px}
+@media(max-width:850px){
+  .print-bar{gap:8px}
+  .print-bar .print-actions{gap:5px}
+  .print-actions a,.print-bar button{padding:9px 10px;font-size:11px}
+  .contents-list{columns:1}
+  .contents-list li{padding:2.2mm 0;font-size:clamp(10px,2.3vw,15px)}
+}
